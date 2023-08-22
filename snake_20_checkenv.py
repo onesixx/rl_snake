@@ -1,7 +1,5 @@
-
-
-from snake_env import SnekEnv
 from stable_baselines3.common.env_checker import check_env
+from snake_10_customenv import SnekEnv
 
 env = SnekEnv()
 # It will check your custom environment and output additional warnings if needed

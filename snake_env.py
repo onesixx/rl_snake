@@ -32,7 +32,7 @@ def collision_with_self(snake_position):
         return 0
 
 N_DISCRETE_ACTIONS = 4
-SNAKE_LEN_GOAL = 300
+SNAKE_LEN_GOAL = 30
 N_CHANNELS = 5 + SNAKE_LEN_GOAL  #self.observation =[head_x, head_y, apple_delta_x, apple_delta_y, snake_length] + list(self.prev_actions)
 
 class SnekEnv(gym.Env):
@@ -190,7 +190,7 @@ class SnekEnv(gym.Env):
         observation = np.array(observation)
 
         info ={}
-        return observation , info#, self.info
+        return observation , info #, self.info
 
     # def render(self):
     #     ...

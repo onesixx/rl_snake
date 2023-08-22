@@ -32,7 +32,6 @@ def collision_with_apple(apple_position, score):
                       random.randrange(1,50)*10]
     return apple_position, score
 
-
 ### Game Window :: Display game objects
 img = np.zeros((500,500, 3),dtype='uint8')
 # cv2.imshow('Image', img)
