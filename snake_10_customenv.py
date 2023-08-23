@@ -1,12 +1,14 @@
 # https://stable-baselines3.readthedocs.io/en/master/guide/custom_env.html
-import gymnasium as gym
-from gymnasium import spaces
+
 
 import numpy as np
 import cv2
 import random
 import time
 from collections import deque
+
+import gymnasium as gym
+from gymnasium import spaces
 
 ### Game Rules:
 # 1. die 
@@ -139,7 +141,7 @@ class SnekEnv(gym.Env): # CustomEnv(env):
 
 		return observation, self.reward, self.done, info
 
-	def reset(self, seed=None):
+	def reset(self, seed=None, options=None):
 		if seed is not None:
 			self.np_random = np.random.default_rng(seed=seed)
 	
@@ -171,8 +173,8 @@ class SnekEnv(gym.Env): # CustomEnv(env):
 		observation = [head_x, head_y, apple_delta_x, apple_delta_y, snake_length] + \
                 	list(self.prev_actions)
 		observation = np.array(observation)
-
-		return observation # reward, done, info can't be included
+		info = {}		
+		return observation, info # reward, done, info can't be included
     # --------------------------------------------------------------------------
 	# def render(self, mode='human'):
 	# 	...
