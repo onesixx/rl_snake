@@ -14,8 +14,8 @@ rect_color = (0, 255, 0)  # Green color
 
 # Draw the rectangle on the img_canvas
 cv2.rectangle(img_canvas, 
-              rect_top_left, rect_bottom_right, 
-              rect_color, thickness=3)
+            rect_top_left, rect_bottom_right, 
+            rect_color, thickness=3)
 
 # Convert the BGR image to RGB format
 img_canvas_rgb = cv2.cvtColor(img_canvas, cv2.COLOR_BGR2RGB)

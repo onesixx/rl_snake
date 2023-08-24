@@ -13,8 +13,8 @@ from gymnasium import spaces
 ### Game Rules:
 # 1. die 
 def collision_with_boundaries(snake_head):
-    if snake_head[0]>=500 or snake_head[0]<0 or \
-       snake_head[1]>=500 or snake_head[1]<0 :
+    if  snake_head[0]>=500 or snake_head[0]<0 or \
+		snake_head[1]>=500 or snake_head[1]<0 :
         return 1
     else:
         return 0
@@ -29,8 +29,8 @@ def collision_with_self(snake_position):
 # 3-1. Score increases and apple is moved to new position
 def collision_with_apple(apple_position, score):
     score += 1
-    apple_position = [random.randrange(1,50)*10,
-                      random.randrange(1,50)*10]
+    apple_position = [  random.randrange(1,50)*10,
+						random.randrange(1,50)*10]
     return apple_position, score
 
 N_DISCRETE_ACTIONS = 4

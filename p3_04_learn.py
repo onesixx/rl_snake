@@ -1,7 +1,7 @@
 import os
 import time
-models_dir = f"p_models/{int(time.time())}/"
-logdir = f"p_logs/{int(time.time())}/"
+models_dir = f"models/{int(time.time())}/"
+logdir = f"logs/{int(time.time())}/"
 if not os.path.exists(models_dir):
 	os.makedirs(models_dir)
 

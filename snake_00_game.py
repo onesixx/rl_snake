@@ -6,12 +6,7 @@ import cv2
 import random
 import time
 
-def collision_with_apple(apple_position, score):
-    score += 1
-    apple_position = [random.randrange(1,50)*10,
-                      random.randrange(1,50)*10]
-    return apple_position, score
-
+# 1. die 
 def collision_with_boundaries(snake_head):
     if snake_head[0]>=500 or snake_head[0]<0 or snake_head[1]>=500 or snake_head[1]<0 :
         return 1  # true
@@ -29,11 +24,11 @@ def collision_with_self(snake_position):
 def collision_with_apple(apple_position, score):
     score += 1
     apple_position = [random.randrange(1,50)*10,
-                      random.randrange(1,50)*10]
+                        random.randrange(1,50)*10]
     return apple_position, score
 
 ### Game Window :: Display game objects
-img = np.zeros((500,500, 3),dtype='uint8')
+img = np.zeros((500,500, 3), dtype='uint8')
 # cv2.imshow('Image', img)
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
